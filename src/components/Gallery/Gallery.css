@@ -1,0 +1,48 @@
+.gallery{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin: 200px 0 200px;
+   
+    height: 100vh;
+  }
+
+  .gallery h1{
+    padding-bottom: 20px;
+  }
+
+  .gallery__container{
+  width:50%;
+   
+  } 
+
+  .slick-dots  button:before {
+    opacity: 1;
+    color: #ffffff;
+}
+
+.slick-dots li.slick-active button:before{
+   color:#f64c08 !important;
+   opacity: 1 !important;
+
+}
+
+.slick-dots li button::before{
+    color: #f64c08 !important;
+   
+}
+
+.slick-prev:before, .slick-next:before {
+   
+    color: #f64c08 !important;
+   
+}
+
+
+.slick-dots li button:before{
+    margin-top: 7px;
+    font-size: 10px !important;
+}
+
