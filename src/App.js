@@ -19,7 +19,7 @@ const App=()=>{
     <div>
       <Header selected={selected} setSelected={setSelected} setOpen={setOpen} />
       <TransitionsModal open={open} setOpen={setOpen} />
-      <TopContainer/>
+      <TopContainer setSelected={setSelected} />
       <SkillContainer/>
       <ProjectContainer/>
       <ExperienceContainer/>

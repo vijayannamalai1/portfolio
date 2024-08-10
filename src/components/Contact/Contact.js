@@ -16,17 +16,17 @@ const Contact = () => {
                 Github Username: <span>@vijayannamalai1</span>
             </p>
             <div className='contact__icons'>
-                <a href="linkedin.com">
+                <a href="https://www.linkedin.com/in/annamalai-elumalai/" target='_blank'  rel="noopener noreferrer">
                     <IconButton>
                         <LinkedIn/>
                     </IconButton>
                 </a>
-                <a href="facebook.com">
+                <a href="https://www.facebook.com/vijay.annamalai.750/"  target='_blank'  rel="noopener noreferrer">
                     <IconButton>
                         <Facebook/>
                     </IconButton>
                 </a>
-                <a href="instagram.com">
+                <a href="https://www.instagram.com/vijayannamalai1/"  target='_blank'  rel="noopener noreferrer">
                     <IconButton>
                         <Instagram/>
                     </IconButton>
