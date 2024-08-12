@@ -6,31 +6,11 @@ import {
   Fade,
   InputAdornment,
   Button,
+  IconButton,
 } from "@mui/material";
+import { AccountCircle, Email, Phone, Close } from '@mui/icons-material';
 import "./Modal.css";
-import { AccountCircle, Email, Phone } from '@mui/icons-material';
 import { db, timestamp } from "../../firebase";
-
-// const useStyles = makeStyles((theme) => ({ 
-//   modal: {  
-//     display: "flex",
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   paper: {
-//     display: "flex",
-//     flexDirection: "column",
-//     justifyContent: "center",
-//     alignItems: "center",
-//     backgroundImage:
-//       "linear-gradient(to right top, #d8ff1e, #e8e800, #f4d200, #fbbb00, #fea400, #fe9e10, #fe971b, #fe9123, #fd9934, #fda143, #fca951, #fbb05f)",
-//     boxShadow: theme.shadows[5],
-//     padding: theme.spacing(2, 4, 3),
-//     width: 500,
-//     height: 300,
-//     outline: "none",
-//   },
-// }));
 
 const modalStyle = {
   display: "flex",
@@ -39,32 +19,30 @@ const modalStyle = {
 };
 
 const paperStyle = {
+  position: "relative", 
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
-  backgroundImage:
-    "linear-gradient(to right top, #d8ff1e, #e8e800, #f4d200, #fbbb00, #fea400, #fe9e10, #fe971b, #fe9123, #fd9934, #fda143, #fca951, #fbb05f)",
   boxShadow: "0px 3px 5px 2px rgba(0, 0, 0, 0.3)",
   padding: "16px 32px 24px",
-  width: 500,
-  height: 350,
   outline: "none",
-  backgroundColor:'viloet'
 };
 
-
 export default function TransitionsModal({ open, setOpen }) {
-
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
+
+  const handleClose = () => {
+    // Reset form fields and error message when closing the modal
+    setName("");
+    setEmail("");
+    setPhone("");
+    setError("");
+    setOpen(false);
+  };
 
   const handleClick = async () => {
     if (name && email && phone) {
@@ -77,6 +55,7 @@ export default function TransitionsModal({ open, setOpen }) {
           timestamp: timestamp,
         });
 
+        // Clear fields and close the modal after submission
         setName("");
         setPhone("");
         setEmail("");
@@ -99,16 +78,23 @@ export default function TransitionsModal({ open, setOpen }) {
         open={open}
         onClose={handleClose}
         closeAfterTransition
-      
       >
         <Fade in={open}>
-          <div style={paperStyle}>
+          <div className="modal__paper" style={paperStyle}>
+            <IconButton
+              className="modal__closeButton"
+              onClick={handleClose}
+            >
+              <Close />
+            </IconButton>
+
             <h2 id="transition-modal-title" className="modal__title">
               Join with Me
             </h2>
             <TextField
               id="standard-basic"
-              label="Name" className="custom-textfield"
+              label="Name"
+              className="custom-textfield"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -119,7 +105,6 @@ export default function TransitionsModal({ open, setOpen }) {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-
             <br />
             <TextField
               id="standard-basic1"

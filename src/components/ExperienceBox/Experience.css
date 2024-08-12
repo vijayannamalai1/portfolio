@@ -18,3 +18,35 @@
     font-size: 16px;
     letter-spacing: 1px;
 }
+
+@media (max-width: 1200px) {
+
+
+    .experience {
+        width: 150px;
+        height: 150px;
+        text-align: center;
+      
+    }
+
+    .experience >h1{
+        font-size: 28px;
+
+    }
+    .experience >p{
+       
+        font-size: 15px;
+       
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    
+
+}
+
+@media (max-width: 480px) {
+    
+}

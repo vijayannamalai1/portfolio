@@ -33,3 +33,31 @@
 color: white;
 font-size: 30px;
 }
+
+
+@media (max-width: 1200px) {
+    .contact{
+        margin: 50px 0 100px;
+       }
+    .contact__container{
+  width: 60%;
+    }
+  
+}
+
+
+
+@media (max-width: 768px) {
+    .contact__container{
+        width: 70%;
+          }
+
+}
+
+@media (max-width: 480px) {
+    .contact__container>p{
+        /* font-size: 20px; */
+        text-align: center;
+        /* padding-bottom: 30px; */
+    }
+}

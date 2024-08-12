@@ -24,6 +24,7 @@ const Gallery = () => {
     <Element className='gallery' name='gallery'>
      <h1>Gallery</h1>
      <div className='gallery__container'>
+        <div>
      <Slider {...settings}>
       <div>
        
@@ -56,6 +57,7 @@ const Gallery = () => {
      
    </div>
     </Slider>
+    </div>
      </div>
 
     </Element>

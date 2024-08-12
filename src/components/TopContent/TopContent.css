@@ -80,3 +80,177 @@ font-size: 13.5px;
   
   .fadeInLeft {
     animation: fadeInLeft 1.5s; }
+
+
+
+    @media (max-width: 1200px) {
+   @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.topContent{
+    color: white;
+    position: relative;
+}
+
+.topContent__container{
+    position: absolute;
+    top:300px;
+    right: 150px;
+}
+
+.topContent__container>p{
+    letter-spacing: 1px;
+    text-align: left;
+    padding-left: 3px;
+    padding-top: 20px;
+}
+
+.topContent__container>a>button{
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 5px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+
+.topContent__container>h1{
+font-size: 50px;
+font-family: 'Montserrat',sans-serif;
+}
+
+.topContent__downloadButton{
+    color: white;
+    background-color: #f64c08;
+    font-size: 14px;
+    padding: 10px 30px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    margin-right: 20px;
+   
+   
+}
+.topContent__downloadButton:hover{
+    color: #f64c08;
+background-color: white;
+font-weight: 600;
+font-size: 13.5px;
+}
+
+.topContent__workButton{
+    color: white;
+    border: 1px solid white !important;
+    background-color: transparent;
+    font-size: 14px;
+    padding: 9px 45px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+}
+.topContent__workButton:hover{
+    color: black;
+    background-color: white;
+    font-weight: 600;
+    font-size: 13.5px;
+}
+
+@keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadeInLeft {
+    animation: fadeInLeft 1.5s; }
+
+
+
+    @media (max-width: 1200px) {
+        .topContent__container {
+            top:310px;
+            left: 50px;
+        }
+        .topContent__container>h1 {
+            font-size: 40px; /* Decrease font size slightly for medium screens */
+        }
+   
+    }
+    
+    
+    
+    @media (max-width: 768px) {
+
+        .topContent__container {
+            top:300px;
+            left: 50px;
+        }
+
+        .topContent__container>h1 {
+            font-size: 35px;
+        }
+    
+        .topContent__downloadButton,
+        .topContent__workButton {
+            font-size: 12px;
+            padding: 8px 25px; 
+        }
+    
+    }
+    
+    @media (max-width: 480px) {
+        .topContent__container{
+         
+            left: 10px;
+        }   
+       
+        .topContent__container>h1 {
+            font-size: 28px; /* Smaller font size for mobile screens */
+        }
+    
+        .topContent__downloadButton,
+        .topContent__workButton {
+            font-size: 10px; /* Adjust button font size for mobile screens */
+            padding: 6px 20px; /* Adjust button padding for mobile screens */
+        }
+
+        .topContent__container>p{
+           
+            padding-top: 10px;
+            font-size: 14px;
+        }
+        
+        
+    }
+   
+    }
+    
+    
+    
+    @media (max-width: 768px) {
+
+        .topContent__container{
+            position: absolute;
+            top:340px;
+            right: 140px;
+        }   
+    
+    }
+    
+    @media (max-width: 480px) {
+
+        .topContent__container{
+            position: absolute;
+            top:340px;
+            right: 0px;
+        }   
+
+        .topContent__container>h1{
+            font-size: 26px;
+           
+            }
+        
+    }

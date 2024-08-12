@@ -44,3 +44,41 @@
 .MuiSvgIcon-root{
   color:rgba(0,0,0,0.9);
 }
+
+
+.modal__paper {
+  width: 500px;
+  height: 350px;
+  background-image: linear-gradient(to right top, #d8ff1e, #e8e800, #f4d200, #fbbb00, #fea400, #fe9e10, #fe971b, #fe9123, #fd9934, #fda143, #fca951, #fbb05f);
+}
+
+.modal__closeButton{
+  position: absolute !important;
+  top: 10px;
+  right: 10px;
+  color: black;
+}
+
+
+
+@media (max-width: 768px) {
+
+}
+
+
+@media (max-width: 480px) {
+
+  .modal__button{
+    padding: 3px 18px !important;
+  }
+
+  .MuiInputBase-formControl{
+    width: 80vw !important;
+    height: 45px;
+  }
+  .modal__paper {
+    width: 82vw !important;
+    height: 350px;
+
+  }
+}

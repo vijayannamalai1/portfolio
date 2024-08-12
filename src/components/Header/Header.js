@@ -14,13 +14,13 @@ const Header = ({ selected, setSelected, setOpen }) => {
       <div className='header__left'>
         <h1>Develop<span>er</span></h1>
       </div>
-      <div className='header__menuIcon' onClick={toggleMenu}>
-        <span className={`header__menuIcon--bar ${menuOpen ? 'open' : ''}`}></span>
-        <span className={`header__menuIcon--bar ${menuOpen ? 'open' : ''}`}></span>
-        <span className={`header__menuIcon--bar ${menuOpen ? 'open' : ''}`}></span>
+      <div className={`header__menuIcon ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+        <span className={`header__menuIcon--bar`}></span>
+        <span className={`header__menuIcon--bar`}></span>
+        <span className={`header__menuIcon--bar`}></span>
       </div>
       <div className={`header__right ${menuOpen ? 'header__right--open' : ''}`}>
-        <Link to='about' smooth={true} duration={500}>
+        <Link to='about' smooth={true} duration={500} offset={-150}>
           <h4
             className={selected === 'about' ? 'header__right--active' : undefined}
             onClick={() => setSelected('about')}
@@ -53,7 +53,7 @@ const Header = ({ selected, setSelected, setOpen }) => {
             Contact
           </h4>
         </Link>
-        <h4 className='header__rightButton' onClick={() => setOpen(true)}>Join with Me</h4>
+        <h4 className='header__rightButton' onClick={() =>{ setMenuOpen(false); setOpen(true); }}>Join with Me</h4>
       </div>
     </div>
   );
