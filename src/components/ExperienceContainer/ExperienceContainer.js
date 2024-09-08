@@ -10,7 +10,7 @@ const ExperienceContainer = () => {
     <div className='experienceContainer__info'>
         <Experience number={'+10'} title={'Clients'} style={{}}/>
         <Experience number={'35+'} title={'Projects'} style={{backgroundColor:"#f64c08"}}/>
-        <Experience number={'2+'} title={'Years Experience'}/>
+        <Experience number={'3+'} title={'Years Experience'}/>
         <Experience number={'45+'} title={'Skills acquired'}/>
     </div>
   </Element>
